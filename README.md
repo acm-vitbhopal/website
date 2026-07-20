@@ -1,36 +1,193 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ACM Student Chapter Website
 
-## Getting Started
+Official website for the **ACM Student Chapter at VIT Bhopal University**.
 
-First, run the development server:
+This project serves as the official digital platform for the ACM Student Chapter, providing information about the chapter, its events, team, gallery, memberships, and future initiatives.
+
+> 🚧 **Project Status:** Under active development.
+
+---
+
+## ✨ Features (Planned)
+
+- Modern and responsive user interface
+- About ACM and the student chapter
+- Events and workshops
+- Team showcase
+- Gallery
+- Membership information
+- Contact page
+
+### Future Enhancements
+
+- Member authentication
+- Admin dashboard
+- Event registrations
+- Certificate generation
+- Blog and announcements
+- CODE BLACK event platform integration
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- Next.js (App Router)
+- React
+- JavaScript
+- Tailwind CSS
+
+### Backend 
+
+- Node.js
+- Express.js
+- MongoDB Atlas
+
+### Development Tools
+
+- Git
+- GitHub
+- npm
+- ESLint
+
+---
+
+## 📂 Project Structure
+
+```text
+website/
+│
+├── public/
+│
+├── src/
+│   ├── app/
+│   ├── components/
+│   │   ├── common/
+│   │   ├── layout/
+│   │   ├── sections/
+│   │   └── ui/
+│   │
+│   ├── constants/
+│   ├── hooks/
+│   ├── lib/
+│   ├── services/
+│   ├── styles/
+│   └── utils/
+│
+├── package.json
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v22+ recommended)
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Move into the project directory:
+
+```bash
+cd website
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📜 Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Runs the development server.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+Creates an optimized production build.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Starts the production server.
+
+```bash
+npm run lint
+```
+
+Runs ESLint to check code quality.
+
+---
+
+## 🤝 Contributing
+
+This project follows a feature-branch workflow.
+
+- Create a feature branch from `develop`
+- Make your changes
+- Open a Pull Request
+- Wait for review before merging
+
+Detailed contribution guidelines will be added in `CONTRIBUTING.md`.
+
+---
+
+## 📌 Development Status
+
+Current Version:
+
+```
+v0.1.0
+```
+
+Status:
+
+```
+Planning & Initial Development
+```
+
+---
+
+## 📄 License
+
+This project is currently **not licensed**.
+
+A license will be added before the repository becomes public.
+
+---
+
+## 👨‍💻 Maintained By
+
+**ACM Student Chapter**  
+VIT Bhopal University
