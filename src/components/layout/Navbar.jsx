@@ -7,8 +7,8 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b-4 border-brand-black bg-bg-light/90 backdrop-blur-sm">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="font-space-grotesk text-2xl font-black tracking-tighter">
-          ACM<span className="text-brand-blue">.</span>VITB
+        <Link href="/" className="font-space-grotesk text-3xl font-black tracking-tighter">
+          ACM<span className="text-brand-pink">.</span>VITB
         </Link>
 
         {/* Desktop Nav */}

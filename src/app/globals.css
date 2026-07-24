@@ -4,15 +4,17 @@
   --font-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-space-grotesk: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
 
-  --color-bg-light: #fdfbf7;
-  --color-brand-yellow: #ffd84d;
-  --color-brand-purple: #a855f7;
-  --color-brand-blue: #3b82f6;
+  --color-bg-light: #fbeaff; /* Aardvark uses this light pinkish/white for some sections */
+  --color-brand-yellow: #ffdb58; /* Very warm Aardvark yellow */
+  --color-brand-cyan: #00e5ff;
+  --color-brand-pink: #f2118f; /* Aardvark's vibrant pink */
+  --color-brand-purple: #9b72f1;
   --color-brand-black: #111111;
 
-  --shadow-brutal: 4px 4px 0px 0px rgba(17,17,17,1);
-  --shadow-brutal-hover: 2px 2px 0px 0px rgba(17,17,17,1);
-  --shadow-brutal-lg: 8px 8px 0px 0px rgba(17,17,17,1);
+  /* Aardvark style relies on very thick, solid black drop shadows */
+  --shadow-brutal: 6px 6px 0px 0px rgba(17,17,17,1);
+  --shadow-brutal-hover: 3px 3px 0px 0px rgba(17,17,17,1);
+  --shadow-brutal-lg: 12px 12px 0px 0px rgba(17,17,17,1);
 }
 
 @layer base {
@@ -21,13 +23,13 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-space-grotesk font-bold tracking-tight;
+    @apply font-space-grotesk font-black tracking-tighter;
   }
 }
 
 @layer utilities {
   .brutal-border {
-    @apply border-2 border-brand-black;
+    @apply border-[3px] border-brand-black;
   }
   
   .brutal-shadow {
@@ -35,10 +37,10 @@
   }
   
   .brutal-shadow:active {
-    @apply shadow-none translate-x-[4px] translate-y-[4px];
+    @apply shadow-none translate-x-[6px] translate-y-[6px];
   }
 
   .brutal-shadow-hover:hover {
-    @apply shadow-brutal-hover translate-x-[2px] translate-y-[2px];
+    @apply shadow-brutal-hover translate-x-[3px] translate-y-[3px];
   }
 }
