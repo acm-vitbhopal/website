@@ -6,7 +6,7 @@ Welcome to the ACM VIT Bhopal tech team! We are building a high-end, neo-brutali
 Do **not** use arbitrary tailwind shadows or borders. We have predefined CSS utility classes to maintain our signature brutalist look:
 - **Borders:** Do not use `border-2` or `rounded-lg`. Use `.brutal-border` or explicitly `border-[3px] border-brand-black`. 
 - **Shadows:** Do not use `shadow-lg`. Use `.brutal-shadow` which gives the solid, hard black drop shadow. Use `.brutal-shadow-hover` on interactive elements.
-- **Colors:** Only use the brand colors defined in `tailwind.config` (e.g. `bg-brand-yellow`, `bg-brand-pink`, `bg-brand-cyan`, `bg-brand-purple`, `bg-brand-black`).
+- **Colors:** Only use the brand colors defined in `globals.css` (e.g. `bg-brand-yellow`, `bg-brand-pink`, `bg-brand-cyan`, `bg-brand-purple`, `bg-brand-black`).
 
 ## 2. Shared UI Components
 Before building a form or a card, check the `src/components/ui/` directory. 
@@ -21,10 +21,20 @@ If you need a new reusable component, ask the Tech Lead before building it so it
 - **One Component per File:** Keep files clean. Do not define 5 different components in a single file.
 - **Client vs Server:** We are using Next.js App Router. If your component uses `framer-motion`, `useState`, or `useEffect`, you MUST put `"use client";` at the very top of the file.
 
-## 4. Git Workflow
-- Do not push directly to `main` or `develop`.
-- Create a new branch for your task (e.g., `feature/events-page`).
-- When done, push your branch and open a Pull Request (PR) against `develop`.
-- The Tech Lead will review your PR for design consistency before merging.
+## 4. Git Workflow (For Beginners)
+Our active development branch is `develop`. The `main` branch is locked for production only.
+
+**How to start your task:**
+1. Switch to the develop branch: `git checkout develop`
+2. Get the latest code: `git pull origin develop`
+3. Create a new branch for your specific task: `git checkout -b feature/your-task-name`
+
+**How to submit your task:**
+1. Stage your changes: `git add .`
+2. Commit with a clear message: `git commit -m "feat: built the events page"`
+3. Push to your branch: `git push origin feature/your-task-name`
+4. Go to GitHub and open a **Pull Request (PR)** from your branch into `develop`.
+5. Fill out the Pull Request template provided.
+6. The Tech Lead will review your code. Do not merge it yourself!
 
 Let's ship this! 🚀
