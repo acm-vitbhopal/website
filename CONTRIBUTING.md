@@ -1,12 +1,12 @@
 # Contributing to ACM Website
 
-Welcome to the ACM VIT Bhopal tech team! We are building a high-end, neo-brutalist website for our chapter. Since we are moving fast to hit our deployment deadline, it is critical that everyone follows these standard practices.
+Welcome to the ACM VIT Bhopal tech team! We are building a high-end, tech-focused website for our chapter. Since we are moving fast to hit our deployment deadline, it is critical that everyone follows these standard practices.
 
-## 1. Neo-Brutalist Design System
-Do **not** use arbitrary tailwind shadows or borders. We have predefined CSS utility classes to maintain our signature brutalist look:
-- **Borders:** Do not use `border-2` or `rounded-lg`. Use `.brutal-border` or explicitly `border-[3px] border-brand-black`. 
-- **Shadows:** Do not use `shadow-lg`. Use `.brutal-shadow` which gives the solid, hard black drop shadow. Use `.brutal-shadow-hover` on interactive elements.
-- **Colors:** Only use the brand colors defined in `globals.css` (e.g. `bg-brand-yellow`, `bg-brand-pink`, `bg-brand-cyan`, `bg-brand-purple`, `bg-brand-black`).
+## 1. The Blue Theme Design System
+We have pivoted to a sleek, modern **Blue Theme**. Do **not** use arbitrary tailwind colors, shadows, or borders. We have predefined CSS utility classes to maintain our look:
+- **Borders:** Do not use `border-2` or `rounded-lg` randomly. Use `.brutal-border` which now applies a thick Navy Blue border. 
+- **Shadows:** Do not use `shadow-lg`. Use `.brutal-shadow` which gives the new, modern, sleek drop shadow (no longer the harsh black offset block).
+- **Colors:** Only use the brand colors defined in `globals.css` (`bg-brand-navy`, `bg-brand-blue`, `bg-brand-light-blue`, `bg-brand-off-white`).
 
 ## 2. Shared UI Components
 Before building a form or a card, check the `src/components/ui/` directory. 
@@ -17,7 +17,7 @@ Before building a form or a card, check the `src/components/ui/` directory.
 If you need a new reusable component, ask the Tech Lead before building it so it can be added to the shared library.
 
 ## 3. Code Standards
-- **Component Files:** Use `PascalCase.jsx` for all React component filenames (e.g., `HeroSection.jsx`, not `heroSection.jsx`).
+- **Component Files:** Use `PascalCase.jsx` for all React component filenames (e.g., `HeroSection.jsx`).
 - **One Component per File:** Keep files clean. Do not define 5 different components in a single file.
 - **Client vs Server:** We are using Next.js App Router. If your component uses `framer-motion`, `useState`, or `useEffect`, you MUST put `"use client";` at the very top of the file.
 

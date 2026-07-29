@@ -42,12 +42,12 @@ export function Button({
     y.set(0);
   };
 
-  const baseStyles = "inline-flex items-center justify-center font-space-grotesk font-bold rounded-full transition-colors duration-200 cursor-pointer outline-none";
+  const baseStyles = "inline-flex items-center justify-center font-space-grotesk font-bold rounded-full transition-colors duration-200 cursor-pointer outline-none shadow-md hover:shadow-lg";
   
   const variants = {
-    primary: "bg-brand-pink text-white",
-    secondary: "bg-brand-yellow text-brand-black",
-    outline: "bg-white text-brand-black", // Fixed outline background
+    primary: "bg-brand-navy text-white hover:bg-[#1a3a5a]",
+    secondary: "bg-brand-light-blue text-brand-navy hover:bg-white",
+    outline: "bg-transparent border-[3px] border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white",
   };
 
   const sizes = {
@@ -63,18 +63,15 @@ export function Button({
       onMouseMove={handleMouseMove} 
       onMouseLeave={handleMouseLeave}
     >
-      {/* Fixed Shadow/Backdrop Layer */}
-      <div className="absolute inset-0 rounded-full border-[3px] border-brand-black bg-brand-black translate-x-[6px] translate-y-[6px]"></div>
-
-      {/* Moving Button Layer */}
+      {/* Moving Button Layer (No brutalist offset shadow) */}
       <motion.button 
         style={{ x: springX, y: springY }}
-        whileTap={{ x: 6, y: 6 }}
+        whileTap={{ scale: 0.95 }}
         className={cn(
           baseStyles, 
           variants[variant], 
           sizes[size], 
-          "relative z-10 border-[3px] border-brand-black", 
+          "relative z-10", 
           className
         )}
         {...props}

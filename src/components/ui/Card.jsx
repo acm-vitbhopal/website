@@ -1,18 +1,17 @@
 import { cn } from "@/lib/utils";
 
-export function Card({ children, className, color = "cyan", ...props }) {
+export function Card({ children, className, color = "white", ...props }) {
   const colors = {
-    cyan: "bg-brand-cyan text-brand-black",
-    yellow: "bg-brand-yellow text-brand-black",
-    pink: "bg-brand-pink text-white",
-    purple: "bg-brand-purple text-white",
-    white: "bg-white text-brand-black",
+    navy: "bg-brand-navy text-white",
+    blue: "bg-brand-blue text-white",
+    light: "bg-brand-light-blue text-brand-navy",
+    white: "bg-brand-off-white text-brand-navy",
   };
 
   return (
     <div 
       className={cn(
-        "rounded-3xl brutal-border p-8 md:p-10 flex flex-col transition-transform hover:-translate-y-2",
+        "rounded-3xl brutal-border p-8 md:p-10 flex flex-col transition-transform hover:-translate-y-2 bg-white brutal-shadow",
         colors[color],
         className
       )}

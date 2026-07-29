@@ -4,22 +4,22 @@
   --font-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-space-grotesk: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
 
-  --color-bg-light: #fbeaff; /* Aardvark uses this light pinkish/white for some sections */
-  --color-brand-yellow: #ffdb58; /* Very warm Aardvark yellow */
-  --color-brand-cyan: #00e5ff;
-  --color-brand-pink: #f2118f; /* Aardvark's vibrant pink */
-  --color-brand-purple: #9b72f1;
-  --color-brand-black: #111111;
+  /* Blue Theme Palette */
+  --color-bg-light: #f0f4f8; 
+  --color-brand-navy: #102a43; /* Deep navy for text, backgrounds, and borders */
+  --color-brand-blue: #2563eb; /* Vibrant mid-blue for accents */
+  --color-brand-light-blue: #d6e8f5; /* Soft light blue for hero background */
+  --color-brand-off-white: #f8fafc; /* For polaroid and ticket backgrounds */
+  --color-brand-tape: #e5d5b5; /* Masking tape color */
 
-  /* Aardvark style relies on very thick, solid black drop shadows */
-  --shadow-brutal: 6px 6px 0px 0px rgba(17,17,17,1);
-  --shadow-brutal-hover: 3px 3px 0px 0px rgba(17,17,17,1);
-  --shadow-brutal-lg: 12px 12px 0px 0px rgba(17,17,17,1);
+  /* Sleeker, modern shadows (replacing brutalist block shadows) */
+  --shadow-brand: 0 10px 25px -5px rgba(16, 42, 67, 0.15), 0 8px 10px -6px rgba(16, 42, 67, 0.1);
+  --shadow-brand-hover: 0 20px 25px -5px rgba(16, 42, 67, 0.2), 0 8px 10px -6px rgba(16, 42, 67, 0.1);
 }
 
 @layer base {
   body {
-    @apply bg-bg-light text-brand-black font-inter;
+    @apply bg-bg-light text-brand-navy font-inter;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -28,19 +28,21 @@
 }
 
 @layer utilities {
+  /* Retaining the thick borders, but using Navy */
   .brutal-border {
-    @apply border-[3px] border-brand-black;
+    @apply border-[3px] border-brand-navy;
   }
   
+  /* Updating shadow classes to use the new sleek shadows instead of offset blocks */
   .brutal-shadow {
-    @apply shadow-brutal transition-all duration-200;
+    @apply shadow-brand transition-all duration-300;
   }
   
   .brutal-shadow:active {
-    @apply shadow-none translate-x-[6px] translate-y-[6px];
+    @apply shadow-none translate-y-1;
   }
 
   .brutal-shadow-hover:hover {
-    @apply shadow-brutal-hover translate-x-[3px] translate-y-[3px];
+    @apply shadow-brand-hover -translate-y-1;
   }
 }
