@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "../ui/Button";
-import { Menu, X } from "lucide-react";
+import { House, Menu, X } from "lucide-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +11,11 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full brutal-border border-x-0 border-t-0 bg-brand-off-white/90 backdrop-blur-sm">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link href="/" className="font-space-grotesk text-3xl font-black tracking-tighter text-brand-navy hover:text-brand-blue transition-colors">
+        <Link href="/" className="flex items-center gap-2 font-space-grotesk text-3xl font-black tracking-tighter text-brand-navy hover:text-brand-blue transition-colors">
+          <House className="w-7 h-7" />
+          <span>
           ACM<span className="text-brand-blue">.</span>VITB
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 font-bold text-brand-navy">
