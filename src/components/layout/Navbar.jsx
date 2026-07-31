@@ -11,7 +11,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full brutal-border border-x-0 border-t-0 bg-brand-off-white/90 backdrop-blur-sm">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link href="/" className="font-space-grotesk text-3xl font-black tracking-tighter text-brand-navy">
+        <Link href="/" className="font-space-grotesk text-3xl font-black tracking-tighter text-brand-navy hover:text-brand-blue transition-colors">
           ACM<span className="text-brand-blue">.</span>VITB
         </Link>
 
