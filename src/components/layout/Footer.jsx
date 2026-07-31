@@ -21,8 +21,9 @@ export function Footer() {
               href="/"
               className="flex items-center gap-3 font-space-grotesk text-4xl font-black tracking-tighter hover:text-brand-light-blue transition-colors"
             >
-              <Code2 className="w-10 h-10 text-brand-light-blue" />
-
+              <div className="flex h-12 w-12 items-center justify-center brutal-border border-dashed bg-brand-off-white/10 text-[10px] font-bold uppercase tracking-wide">
+                Logo
+              </div>
               <span>
                 ACM<span className="text-brand-light-blue">.</span>VITB
               </span>
