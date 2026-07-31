@@ -29,7 +29,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-2">
           {navLinks.map((link) => (
             <Link
@@ -41,7 +41,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        {/* Actions */}
+        {/* Join Button */}
         <div className="flex items-center gap-4">
           <Button variant="secondary" className="hidden md:inline-flex">
             Join ACM
