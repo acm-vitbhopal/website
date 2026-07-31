@@ -3,7 +3,7 @@ import { Button } from "../ui/Button";
 import {
   Instagram,
   Linkedin,
-  Github,
+  GithubIcon,
   Code2,
   ArrowRight,
 } from "lucide-react";
@@ -116,7 +116,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 hover:text-brand-light-blue transition-colors"
               >
-                <Github className="w-5 h-5" />
+                <GithubIcon className="w-5 h-5" />
                 GitHub
               </a>
             </div>
