@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "../ui/Button";
 import { House, Menu, X } from "lucide-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { name: "About", href: "/about" },
@@ -31,14 +33,21 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-2">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="rounded-md px-4 py-2 font-bold text-brand-navy transition-all duration-200 hover:bg-brand-light-blue hover:text-brand-navy" >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const active = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`rounded-md px-4 py-2 font-bold transition-all duration-200 ${
+                  active
+                    ? "bg-brand-blue text-brand-off-white"
+                    : "text-brand-navy hover:bg-brand-light-blue hover:text-brand-navy"
+                }`} >
+                {link.name}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Join Button */}
@@ -64,15 +73,22 @@ export function Navbar() {
       {isOpen && (
         <nav className="md:hidden brutal-border border-x-0 border-b-0 bg-brand-off-white px-4 py-5">
           <div className="flex flex-col gap-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="rounded-md px-4 py-3 text-lg font-bold text-brand-navy transition-all hover:bg-brand-light-blue">
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const active = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`rounded-md px-4 py-3 text-lg font-bold transition-all ${
+                    active
+                      ? "bg-brand-blue text-brand-off-white"
+                      : "text-brand-navy hover:bg-brand-light-blue"
+                  }`}>
+                  {link.name}
+                </Link>
+              );
+            })}
 
             <div className="mt-3">
               <Button
