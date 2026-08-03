@@ -24,7 +24,7 @@ export default function EventsPage() {
         </div>
         
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-6xl md:text-8xl font-black text-brand-navy mb-6 tracking-tighter">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-brand-navy mb-6 tracking-tighter">
             Our Events
           </h1>
           <p className="text-xl md:text-2xl font-bold font-inter text-brand-navy/80 max-w-2xl mx-auto">
@@ -40,7 +40,7 @@ export default function EventsPage() {
           {/* Upcoming Events */}
           <div className="mb-24">
             <div className="flex items-center gap-4 mb-10">
-              <h2 className="text-4xl md:text-5xl font-black text-brand-navy">Upcoming</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-navy">Upcoming</h2>
               <div className="flex-1 h-[2px] bg-brand-navy/10 mt-2"></div>
             </div>
             
@@ -52,7 +52,7 @@ export default function EventsPage() {
                       {event.category}
                     </div>
                     
-                    <h3 className="text-4xl font-black mb-6 leading-tight text-brand-navy group-hover:text-brand-blue transition-colors">
+                    <h3 className="text-3xl sm:text-4xl font-black mb-6 leading-tight text-brand-navy group-hover:text-brand-blue transition-colors">
                       {event.title}
                     </h3>
                     
@@ -93,13 +93,13 @@ export default function EventsPage() {
           {/* Past Events */}
           <div>
             <div className="flex items-center gap-4 mb-10">
-              <h2 className="text-4xl md:text-5xl font-black text-brand-navy">Past Events</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-navy">Past Events</h2>
               <div className="flex-1 h-[2px] bg-brand-navy/10 mt-2"></div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {pastEvents.map((event) => (
-                <div key={event.id} className="p-8 bg-brand-off-white rounded-3xl border-[2px] border-brand-navy/20 hover:border-brand-navy/40 transition-colors">
+                <div key={event.id} className="p-6 md:p-8 bg-brand-off-white rounded-3xl border-[2px] border-brand-navy/20 hover:border-brand-navy/40 transition-colors">
                   <div className="inline-block bg-white text-brand-navy px-3 py-1 font-bold rounded-full text-xs mb-4 border border-brand-navy/10">
                     {event.category}
                   </div>
