@@ -1,12 +1,11 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { EVENTS_DATA } from "@/constants/events";
 import { Calendar, MapPin, Clock } from "lucide-react";
-
-export const metadata = {
-  title: "Events | ACM VIT Bhopal",
-  description: "Discover upcoming and past events hosted by ACM VIT Bhopal.",
-};
+import PastEventsSection from "./PastEventsSection";
 
 export default function EventsPage() {
   const upcomingEvents = EVENTS_DATA.filter((event) => event.type === "Upcoming");
@@ -24,12 +23,22 @@ export default function EventsPage() {
         </div>
         
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-brand-navy mb-6 tracking-tighter">
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-5xl sm:text-6xl md:text-8xl font-black text-brand-blue mb-6 tracking-tighter"
+          >
             Our Events
-          </h1>
-          <p className="text-xl md:text-2xl font-bold font-inter text-brand-navy/80 max-w-2xl mx-auto">
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-xl md:text-2xl font-bold font-inter text-brand-navy/80 max-w-2xl mx-auto"
+          >
             Workshops, hackathons, and seminars. Come build with us.
-          </p>
+          </motion.p>
         </div>
       </section>
 
@@ -39,14 +48,27 @@ export default function EventsPage() {
           
           {/* Upcoming Events */}
           <div className="mb-24">
-            <div className="flex items-center gap-4 mb-10">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex items-center gap-4 mb-10"
+            >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-navy">Upcoming</h2>
               <div className="flex-1 h-[2px] bg-brand-navy/10 mt-2"></div>
-            </div>
+            </motion.div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {upcomingEvents.map((event) => (
-                <div key={event.id} className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-brand border-[2px] border-brand-navy group hover:-translate-y-1 transition-transform">
+              {upcomingEvents.map((event, index) => (
+                <motion.div 
+                  key={event.id} 
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-brand border-[2px] border-brand-navy group hover:-translate-y-1 transition-transform"
+                >
                   <div className="p-8 md:p-10 flex-1">
                     <div className="inline-block bg-brand-light-blue text-brand-navy px-3 py-1 font-bold border-[2px] border-brand-navy rounded-full text-sm mb-6">
                       {event.category}
@@ -79,7 +101,7 @@ export default function EventsPage() {
                       Register Now
                     </Button>
                   </div>
-                </div>
+                </motion.div>
               ))}
               
               {upcomingEvents.length === 0 && (
@@ -92,35 +114,18 @@ export default function EventsPage() {
 
           {/* Past Events */}
           <div>
-            <div className="flex items-center gap-4 mb-10">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex items-center gap-4 mb-10"
+            >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-navy">Past Events</h2>
               <div className="flex-1 h-[2px] bg-brand-navy/10 mt-2"></div>
-            </div>
+            </motion.div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {pastEvents.map((event) => (
-                <div key={event.id} className="p-6 md:p-8 bg-brand-off-white rounded-3xl border-[2px] border-brand-navy/20 hover:border-brand-navy/40 transition-colors">
-                  <div className="inline-block bg-white text-brand-navy px-3 py-1 font-bold rounded-full text-xs mb-4 border border-brand-navy/10">
-                    {event.category}
-                  </div>
-                  
-                  <h3 className="text-2xl font-black mb-4 text-brand-navy opacity-80">
-                    {event.title}
-                  </h3>
-                  
-                  <div className="flex items-center gap-4 font-medium font-inter mb-4 text-sm text-brand-navy/60">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      <span>{event.date}</span>
-                    </div>
-                  </div>
-                  
-                  <p className="font-medium leading-relaxed text-brand-navy/60 text-sm">
-                    {event.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <PastEventsSection pastEvents={pastEvents} />
           </div>
 
         </div>
