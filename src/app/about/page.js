@@ -1,6 +1,7 @@
+import { Button } from "@/components/ui/Button";
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#F4F8FC]">
+    <main className="min-h-screen bg-bg-light">
 
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
@@ -8,10 +9,10 @@ export default function AboutPage() {
 
           <div>
             <div className="flex items-center gap-6 mb-8">
-              <h1 className="text-5xl lg:text-6xl font-black text-[#0B2A4A]">
+              <h1 className="text-5xl lg:text-6xl font-black text-brand-navy ">
                 ABOUT
               </h1>
-              <div className="flex-1 h-[3px] bg-[#0B2A4A]" />
+              <div className="flex-1 h-[3px] bg-brand-navy" />
             </div>
 
             <p className="text-lg leading-9 text-slate-700 max-w-xl">
@@ -20,20 +21,20 @@ export default function AboutPage() {
               collaborate to learn, build and shape the future of technology.
             </p>
 
-            <button className="mt-10 px-8 py-4 rounded-full bg-[#0B2A4A] text-white font-semibold">
-              Join Our Community →
-            </button>
+            <Button className="mt-10">
+  Join Our Community →
+</Button>
           </div>
 
           <div className="flex justify-center lg:justify-end">
             <div>
-              <h2 className="text-7xl lg:text-8xl font-black leading-none text-[#0B2A4A]">
+              <h2 className="text-7xl lg:text-8xl font-black leading-none text-brand-navy">
                 BUILD.
               </h2>
-              <h2 className="text-7xl lg:text-8xl font-black leading-none text-[#0B2A4A]">
+              <h2 className="text-7xl lg:text-8xl font-black leading-none text-brand-navy">
                 LEARN.
               </h2>
-              <h2 className="text-7xl lg:text-8xl font-black leading-none text-[#0B2A4A]">
+              <h2 className="text-7xl lg:text-8xl font-black leading-none text-brand-navy">
                 LEAD.
               </h2>
             </div>
@@ -51,7 +52,7 @@ export default function AboutPage() {
               ABOUT ACM VIT BHOPAL
             </span>
 
-            <h2 className="text-5xl font-black text-[#0B2A4A] mt-4 mb-6">
+            <h2 className="text-5xl font-black text-brand-navy mt-4 mb-6">
               Empowering Future Innovators
             </h2>
 
@@ -66,23 +67,24 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-2 gap-6">
 
-            <div className="bg-white rounded-3xl shadow-lg p-8">
-              <h3 className="text-4xl font-black text-[#0B2A4A]">250+</h3>
+
+            <div className="bg-white brutal-border brutal-shadow p-8">
+              <h3 className="text-4xl font-black text-brand-navy">250+</h3>
               <p className="mt-2 text-slate-600">Active Members</p>
             </div>
 
-            <div className="bg-white rounded-3xl shadow-lg p-8">
-              <h3 className="text-4xl font-black text-[#0B2A4A]">40+</h3>
+            <div className="bg-white brutal-border brutal-shadow p-8">
+              <h3 className="text-4xl font-black text-brand-navy">40+</h3>
               <p className="mt-2 text-slate-600">Technical Events</p>
             </div>
 
-            <div className="bg-white rounded-3xl shadow-lg p-8">
-              <h3 className="text-4xl font-black text-[#0B2A4A]">15+</h3>
+            <div className="bg-white brutal-border brutal-shadow p-8">
+              <h3 className="text-4xl font-black text-brand-navy">15+</h3>
               <p className="mt-2 text-slate-600">Projects Built</p>
             </div>
 
-            <div className="bg-white rounded-3xl shadow-lg p-8">
-              <h3 className="text-4xl font-black text-[#0B2A4A]">100%</h3>
+            <div className="bg-white brutal-border brutal-shadow p-8">
+              <h3 className="text-4xl font-black text-brand-navy">100%</h3>
               <p className="mt-2 text-slate-600">Learning Driven</p>
             </div>
 
@@ -95,7 +97,7 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
 
         <div className="text-center mb-14">
-          <h2 className="text-5xl font-black text-[#0B2A4A]">
+          <h2 className="text-5xl font-black text-brand-navy">
             What We Do
           </h2>
 
@@ -106,9 +108,9 @@ export default function AboutPage() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-          <div className="bg-white rounded-3xl shadow-lg p-8">
+          <div className="bg-white brutal-border brutal-shadow p-8">
             <div className="text-5xl mb-4">💻</div>
-            <h3 className="text-2xl font-bold text-[#0B2A4A]">
+            <h3 className="text-2xl font-bold text-brand-navy">
               Workshops
             </h3>
             <p className="text-slate-600 mt-3">
@@ -116,9 +118,9 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-lg p-8">
+          <div className="bg-white brutal-border brutal-shadow p-8">
             <div className="text-5xl mb-4">🏆</div>
-            <h3 className="text-2xl font-bold text-[#0B2A4A]">
+            <h3 className="text-2xl font-bold text-brand-navy">
               Hackathons
             </h3>
             <p className="text-slate-600 mt-3">
@@ -126,9 +128,9 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-lg p-8">
+          <div className="bg-white brutal-border brutal-shadow p-8">
             <div className="text-5xl mb-4">🚀</div>
-            <h3 className="text-2xl font-bold text-[#0B2A4A]">
+            <h3 className="text-2xl font-bold text-brand-navy">
               Projects
             </h3>
             <p className="text-slate-600 mt-3">
@@ -136,9 +138,9 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-lg p-8">
+          <div className="bg-white brutal-border brutal-shadow p-8">
             <div className="text-5xl mb-4">🤝</div>
-            <h3 className="text-2xl font-bold text-[#0B2A4A]">
+            <h3 className="text-2xl font-bold text-brand-navy">
               Community
             </h3>
             <p className="text-slate-600 mt-3">
@@ -153,7 +155,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-24 px-6">
 
-        <div className="max-w-5xl mx-auto bg-[#0B2A4A] rounded-[40px] p-16 text-center text-white">
+        <div className="max-w-5xl mx-auto bg-brand-navy brutal-border brutal-shadow p-16 text-center text-white">
 
           <h2 className="text-5xl font-black">
             Ready to Build the Future?
@@ -164,9 +166,9 @@ export default function AboutPage() {
             creates, and grows together.
           </p>
 
-          <button className="mt-10 bg-white text-[#0B2A4A] px-10 py-4 rounded-full font-bold text-lg">
-            Become a Member
-          </button>
+          <Button className="mt-10">
+  Become a Member
+</Button>
 
         </div>
 

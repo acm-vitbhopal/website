@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/Button";
 export default function TeamPage() {const executiveBoard = [
   {
     name: "Member Name",
@@ -24,8 +25,7 @@ export default function TeamPage() {const executiveBoard = [
   { name: "Member Name", role: "Content Lead" },
 ];
   return (
-    <main className="min-h-screen bg-[#F4F8FC]">
-
+    <main className="min-h-screen bg-bg-light">
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
 
@@ -35,7 +35,7 @@ export default function TeamPage() {const executiveBoard = [
             ACM VIT BHOPAL
           </p>
 
-          <h1 className="text-5xl lg:text-7xl font-black text-[#0B2A4A] mt-6">
+          <h1 className="text-5xl lg:text-7xl font-black text-brand-navy mt-6">
             Meet Our Team
           </h1>
 
@@ -56,18 +56,18 @@ export default function TeamPage() {const executiveBoard = [
       Leadership
     </p>
 
-    <h2 className="text-4xl lg:text-5xl font-black text-[#0B2A4A] mt-4">
+    <h2 className="text-4xl lg:text-5xl font-black text-brand-navy mt-4">
       Faculty Coordinators
     </h2>
   </div>
 
   <div className="grid md:grid-cols-2 gap-8">
 
-    <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
+    <div className="bg-white brutal-border brutal-shadow p-8 text-center">
 
       <div className="w-32 h-32 rounded-full bg-slate-200 mx-auto mb-6"></div>
 
-      <h3 className="text-2xl font-bold text-[#0B2A4A]">
+      <h3 className="text-2xl font-bold text-brand-navy">
         Dr. Faculty Name
       </h3>
 
@@ -82,11 +82,11 @@ export default function TeamPage() {const executiveBoard = [
 
     </div>
 
-    <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
+    <div className="bg-white brutal-border brutal-shadow p-8 text-center">
 
       <div className="w-32 h-32 rounded-full bg-slate-200 mx-auto mb-6"></div>
 
-      <h3 className="text-2xl font-bold text-[#0B2A4A]">
+      <h3 className="text-2xl font-bold text-brand-navy">
         Dr. Faculty Name
       </h3>
 
@@ -113,7 +113,7 @@ export default function TeamPage() {const executiveBoard = [
       Student Leadership
     </p>
 
-    <h2 className="text-5xl font-black text-[#0B2A4A] mt-4">
+    <h2 className="text-5xl font-black text-brand-navy mt-4">
       Executive Board
     </h2>
 
@@ -125,12 +125,12 @@ export default function TeamPage() {const executiveBoard = [
 
       <div
         key={index}
-        className="bg-white rounded-3xl shadow-lg p-8 text-center hover:-translate-y-2 transition duration-300"
+        className="bg-white brutal-border brutal-shadow p-8 text-center hover:-translate-y-2 transition duration-300"
       >
 
         <div className="w-28 h-28 rounded-full bg-slate-200 mx-auto mb-6"></div>
 
-        <h3 className="text-2xl font-bold text-[#0B2A4A]">
+        <h3 className="text-2xl font-bold text-brand-navy">
           {member.name}
         </h3>
 
@@ -156,7 +156,7 @@ export default function TeamPage() {const executiveBoard = [
       Team
     </p>
 
-    <h2 className="text-5xl font-black text-[#0B2A4A] mt-4">
+    <h2 className="text-5xl font-black text-brand-navy mt-4">
       Core Team
     </h2>
 
@@ -172,12 +172,12 @@ export default function TeamPage() {const executiveBoard = [
 
       <div
         key={index}
-        className="bg-white rounded-3xl shadow-lg p-8 text-center hover:-translate-y-2 transition duration-300"
+        className="bg-white brutal-border brutal-shadow p-8 text-center hover:-translate-y-2 transition duration-300"
       >
 
         <div className="w-24 h-24 rounded-full bg-slate-200 mx-auto mb-5"></div>
 
-        <h3 className="text-xl font-bold text-[#0B2A4A]">
+        <h3 className="text-xl font-bold text-brand-navy">
           {member.name}
         </h3>
 
@@ -197,7 +197,7 @@ export default function TeamPage() {const executiveBoard = [
 
 <section className="py-24 px-6">
 
-  <div className="max-w-5xl mx-auto bg-[#0B2A4A] rounded-[40px] p-16 text-center text-white">
+  <div className="max-w-5xl mx-auto bg-brand-navy brutal-border brutal-shadow p-16 text-center text-white">
 
     <h2 className="text-5xl font-black">
       Want to Join ACM?
@@ -208,9 +208,9 @@ export default function TeamPage() {const executiveBoard = [
       and problem-solvers. Learn, collaborate, and grow with ACM VIT Bhopal.
     </p>
 
-    <button className="mt-10 bg-white text-[#0B2A4A] px-10 py-4 rounded-full font-bold text-lg hover:bg-slate-100 transition">
-      Join Our Community →
-    </button>
+    <Button className="mt-10">
+  Join Our Community →
+</Button>
 
   </div>
 
