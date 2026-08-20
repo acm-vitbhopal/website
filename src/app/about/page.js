@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/Button";
+﻿import { Button } from "@/components/ui/Button";
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-bg-light">
