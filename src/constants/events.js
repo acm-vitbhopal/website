@@ -1,15 +1,5 @@
-export const EVENTS_DATA = [
-  {
-    id: "evt-1",
-    title: "Intro to Next.js & React",
-    date: "Oct 15, 2026",
-    time: "5:00 PM - 7:00 PM",
-    location: "Lab 3, Academic Block",
-    description: "Learn the fundamentals of building modern web applications using React and the Next.js framework.",
-    type: "Upcoming",
-    category: "Workshop",
-    color: "cyan",
-  },
+﻿export const EVENTS_DATA = [
+  
   {
     id: "evt-2",
     title: "CODE BLACK Hackathon",
@@ -25,7 +15,7 @@ export const EVENTS_DATA = [
     id: "evt-3",
     title: "Responsible AI: Reimagining AI for All",
     date: "25 September 2025",
-    time: "2:00 PM – 3:00 PM",
+    time: "2:00 PM - 3:00 PM",
     mode: "Online Webinar",
     speaker: "Dr. Rutvi Shah, Associate Professor, Ganpat University, Gujarat",
     description: "ACM Student Chapter, VIT Bhopal organized an insightful webinar on 'Responsible AI: Reimagining AI for All', delivered by Dr. Rutvi Shah, Associate Professor at Ganpat University. The session focused on the ethical development and deployment of Artificial Intelligence, emphasizing fairness, transparency, accountability, and inclusivity in AI systems. Participants gained valuable insights into the importance of building trustworthy AI solutions while understanding the societal impact and future responsibilities of AI professionals.",
@@ -45,7 +35,7 @@ export const EVENTS_DATA = [
     id: "evt-4",
     title: "The Placement Playbook",
     date: "28 March 2026",
-    time: "2:00 PM – 3:00 PM",
+    time: "2:00 PM - 3:00 PM",
     mode: "Online Session",
     speaker: "Parnika Chandra, VIT Bhopal (2017 Batch) | Employee at Sprinklr",
     description: "ACM Student Chapter, VIT Bhopal hosted 'The Placement Playbook', an interactive career guidance session featuring Parnika Chandra, an alumna of VIT Bhopal and Software Professional at Sprinklr. The session provided students with practical strategies for placement preparation, internship opportunities, resume building, interview readiness, and common mistakes to avoid during recruitment. Participants also had the opportunity to interact directly with the speaker through a live Q&A session and gain valuable industry insights.",
@@ -63,3 +53,4 @@ export const EVENTS_DATA = [
     color: "purple",
   }
 ];
+
