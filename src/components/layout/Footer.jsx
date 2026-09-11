@@ -30,7 +30,7 @@ export function Footer() {
               href="/"
               className="flex items-center justify-center gap-3 sm:justify-start font-space-grotesk text-4xl font-black tracking-tighter hover:text-brand-light-blue transition-colors">
               <Image
-                src= "/logo.png"
+                src="/logo.png"
                 alt="ACM VITB Logo"
                 width={48}
                 height={48}
