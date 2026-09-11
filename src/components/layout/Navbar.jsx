@@ -57,7 +57,9 @@ export function Navbar() {
 
         {/* Join Button */}
         <div className="flex items-center gap-4">
-          <Button variant="secondary" className="hidden md:inline-flex !bg-brand-light-blue !text-brand-navy transition-colors hover:!bg-brand-navy hover:!text-brand-off-white" >
+          <Button 
+            variant="secondary" 
+            className="hidden md:inline-flex !bg-brand-light-blue !text-brand-navy transition-colors hover:!bg-brand-navy hover:!text-brand-off-white" >
             Join ACM
           </Button>
 
@@ -98,7 +100,7 @@ export function Navbar() {
             <div className="mt-3">
               <Button
                 variant="secondary"
-                className="w-full"
+                className="w-full !bg-brand-light-blue !text-brand-navy transition-colors hover:!bg-brand-navy hover:!text-brand-off-white"
                 onClick={() => setIsOpen(false)}>
                 Join ACM
               </Button>
