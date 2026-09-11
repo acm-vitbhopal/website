@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "../ui/Button";
 import { ArrowRight, Mail, MapPin } from "lucide-react";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import Image from "next/image";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -22,15 +23,20 @@ export function Footer() {
       <div className="relative container mx-auto px-4 py-14">
         {/* Main Grid */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          
           {/* Brand */}
           <div className="lg:col-span-1 text-center sm:text-left">
             <Link
               href="/"
               className="flex items-center justify-center gap-3 sm:justify-start font-space-grotesk text-4xl font-black tracking-tighter hover:text-brand-light-blue transition-colors">
-              <div className="flex h-12 w-12 items-center justify-center brutal-border border-dashed bg-brand-off-white/10 text-[10px] font-bold uppercase tracking-wide">
-                Logo
-              </div>
-
+              <Image
+                src= "/logo.png"
+                alt="ACM VITB Logo"
+                width={48}
+                height={48}
+                className="h-12 w-12 object-contain"
+                <Image/>
+                
               <span>
                 ACM<span className="text-brand-light-blue">.</span>VITB
               </span>
