@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/Button";
-import {Menu, X} from "lucide-react"
+import {Menu, X} from "lucide-react";
 import Image from "next/image";
 
 export function Navbar() {
