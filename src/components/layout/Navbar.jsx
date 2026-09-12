@@ -27,9 +27,9 @@ export function Navbar() {
           className="flex items-center gap-3 font-space-grotesk text-3xl font-black tracking-tighter text-brand-navy transition-colors hover:text-brand-blue">
           <Image src="/logo.png" 
           alt="ACM VITB Logo" 
-          width={60} 
-          height={60}
-          className="h-11 w-11 object-contain" 
+          width={64} 
+          height={64}
+          className="h-16 w-16 object-contain" 
           />
 
           <span>
