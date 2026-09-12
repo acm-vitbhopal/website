@@ -4,7 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/Button";
-import { House, Menu, X } from "lucide-react";
+import {Menu, X} from "lucide-react";
+import Image from "next/image";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,8 +24,13 @@ export function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 font-space-grotesk text-3xl font-black tracking-tighter text-brand-navy transition-colors hover:text-brand-blue">
-          <House className="h-7 w-7" />
+          className="flex items-center gap-3 font-space-grotesk text-3xl font-black tracking-tighter text-brand-navy transition-colors hover:text-brand-blue">
+          <Image src="/logo.png" 
+          alt="ACM VITB Logo" 
+          width={64} 
+          height={64}
+          className="h-16 w-16 object-contain" 
+          />
 
           <span>
             ACM<span className="text-brand-blue">.</span>VITB
@@ -52,7 +58,9 @@ export function Navbar() {
 
         {/* Join Button */}
         <div className="flex items-center gap-4">
-          <Button variant="secondary" className="hidden md:inline-flex">
+          <Button 
+            variant="secondary" 
+            className="hidden md:inline-flex !bg-brand-light-blue !text-brand-navy transition-colors hover:!bg-brand-navy hover:!text-brand-off-white" >
             Join ACM
           </Button>
 
@@ -93,7 +101,7 @@ export function Navbar() {
             <div className="mt-3">
               <Button
                 variant="secondary"
-                className="w-full"
+                className="w-full !bg-brand-light-blue !text-brand-navy transition-colors hover:!bg-brand-navy hover:!text-brand-off-white"
                 onClick={() => setIsOpen(false)}>
                 Join ACM
               </Button>
