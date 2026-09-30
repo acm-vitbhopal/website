@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Globe, Map, Bot } from "lucide-react";
@@ -8,29 +8,27 @@ export function PastProjects() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
+  // Premium Linear-style 3D reveal (no more bouncy/jarring springs)
   const cardDropVariants = {
-    hidden: { y: -150, opacity: 0, scale: 0.8 },
+    hidden: { y: 60, opacity: 0, rotateX: 10, filter: "blur(10px)" },
     visible: { 
       y: 0, 
       opacity: 1, 
-      scale: 1,
+      rotateX: 0,
+      filter: "blur(0px)",
       transition: { 
-        type: "spring", 
-        stiffness: 150, 
-        damping: 12,
-        mass: 1.2
+        duration: 0.9,
+        ease: [0.16, 1, 0.3, 1] 
       } 
     },
   };
 
   return (
-    <section className="pt-40 pb-40 bg-brand-navy relative z-10 border-b-[3px] border-brand-navy rounded-b-[3rem] -mb-[3rem] overflow-hidden">
+    <section className="pt-40 pb-40 bg-brand-navy relative z-10 border-b-[3px] border-brand-navy rounded-b-[3rem] -mb-[3rem] overflow-hidden" style={{ perspective: "1000px" }}>
       
       {/* Background Waves */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20">
@@ -40,23 +38,33 @@ export function PastProjects() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col items-center mb-24 text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col items-center mb-24 text-center"
+        >
           <h2 className="text-6xl md:text-8xl font-black mb-4 text-white">Shipped.</h2>
           <p className="text-2xl font-bold font-inter text-brand-light-blue/80">
             Projects built by our members
           </p>
-        </div>
+        </motion.div>
 
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, margin: "-50px" }}
           className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-8 max-w-6xl mx-auto"
         >
           
           {/* Project 1 */}
-          <motion.div variants={cardDropVariants} className="relative w-full max-w-sm transform -rotate-3 hover:rotate-0 transition-transform z-10 hover:z-30 hover:scale-105 duration-300">
+          <motion.div 
+            variants={cardDropVariants} 
+            whileHover={{ y: -10, rotateZ: 0, scale: 1.02, zIndex: 30, transition: { duration: 0.3, ease: "easeOut" } }}
+            className="relative w-full max-w-sm transform -rotate-3 z-10 origin-bottom"
+          >
             {/* Tape */}
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-brand-tape shadow-sm rotate-2 z-20"></div>
             {/* Polaroid Card */}
@@ -70,7 +78,11 @@ export function PastProjects() {
           </motion.div>
 
           {/* Project 2 */}
-          <motion.div variants={cardDropVariants} className="relative w-full max-w-sm transform rotate-6 hover:-rotate-2 transition-transform z-20 hover:z-30 mt-0 md:mt-12 hover:scale-105 duration-300">
+          <motion.div 
+            variants={cardDropVariants} 
+            whileHover={{ y: -10, rotateZ: 0, scale: 1.02, zIndex: 30, transition: { duration: 0.3, ease: "easeOut" } }}
+            className="relative w-full max-w-sm transform rotate-6 z-20 mt-0 md:mt-12 origin-bottom"
+          >
             {/* Tape */}
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-brand-tape shadow-sm -rotate-3 z-20"></div>
             {/* Polaroid Card */}
@@ -84,7 +96,11 @@ export function PastProjects() {
           </motion.div>
 
           {/* Project 3 */}
-          <motion.div variants={cardDropVariants} className="relative w-full max-w-sm transform -rotate-2 hover:rotate-2 transition-transform z-10 hover:z-30 mt-0 md:-mt-8 hover:scale-105 duration-300">
+          <motion.div 
+            variants={cardDropVariants} 
+            whileHover={{ y: -10, rotateZ: 0, scale: 1.02, zIndex: 30, transition: { duration: 0.3, ease: "easeOut" } }}
+            className="relative w-full max-w-sm transform -rotate-2 z-10 mt-0 md:-mt-8 origin-bottom"
+          >
             {/* Tape */}
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-brand-tape shadow-sm rotate-4 z-20"></div>
             {/* Polaroid Card */}
